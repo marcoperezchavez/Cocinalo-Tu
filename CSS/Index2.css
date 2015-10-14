@@ -1,0 +1,62 @@
+body{
+	background-color: #4B610B;
+}
+#main{
+	background-color: #BFFF00;
+
+	width: 1470px;
+	height: 750px;
+	position: relative;
+	left: 20px;
+	top:20px;
+}
+	div.hijo1, div.hijo2{
+		background-color: #5FB404;
+		top: 0px;
+		width: 1400px;
+		height: 320px;
+		position:relative;
+		left: 35px;
+	}
+	 div.hijo2{
+	 	top:30px;
+	 	
+
+	 }
+
+
+body div{
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	left: 50%;
+}
+div.unofixed, div.dosrelative, div.tresabsolute{
+		width: 400px;
+		height: 120px;
+		background-color: #0B3B0B;
+}
+.unofixed {
+	position:fixed;
+	left: 10%;
+	top:68px;	
+}
+.dosrelative{
+	position: relative;
+	top: 109px;	
+	left: 520px;
+}
+.tresabsolute{
+	position: absolute;
+	top: 132px;
+	left:990px;
+}
+
+
+.float, .float1, .float2, .float3, .float4, .float5, .Nofloat{
+		width: 180px;
+		height: 120px;
+		background-color: red;
+		float: left;
+		margin: 3px
+	}

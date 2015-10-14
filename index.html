@@ -9,63 +9,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Cocinalo Tu</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="CSS/Index.css">
+    <script type="text/javascript" src="JavaScript/CocinaloTu.js"></script>
 </head>
-<body>
+<body id="body" class="body">
     <header id="main-header" class="header">
         <div align= "center" id="Encabezado">
-            <img src="pictures/placerAlPlato.png" alt="Placer al Plato">
+            <img src="pictures/placerAlPlato.png" height="109" width="600">
+            
         </div>
     </header>
+    <span id="menucompleto" class "menus">
+        <ul id="menu" class="menu">
+            <li>Inicio</li>
+            <li>Recetas</li>
+            <li>Comentarios</li>
+        </ul>
+    </span>
 
-    <ul id="menu" class="menu">
-        <li>Inicio</li>
-        <li>Recetas</li>
-        <li>Comentarios</li>
-    </ul>
-
-    <div id= "frutas">
-        ¿Que es lo que tienes?
-        <select> 
-            <option value="jitomates">jitomates</option>
-            <option value="cebollas">cebollas</option>
-            <option value="lechuga">lechuga</option>
-            <option value="papas">papas</option>
-            <option value="Nada">Nada</option>
-        </select>
-        <input type = "submit" value="Añadir">
-
-
+    <div id= "msjpmain" class="msjpmain">
+        ¿Que es lo que tienes?  Selecciona una opción
     </div>
+    <div id= "frutas" class ="frutas">
+        <p class = "mensajeseleccion">Frutas y verduras</p>
+        <p class= "dropdownlist" id="dropfrutas">
+            <select id ="seleccionarFrutas"> 
 
+                <option value="Jitomates">Jitomates</option>
+                <option value="Cebollas">Cebollas</option>
+                <option value="Lechuga">Lechuga</option>
+                <option value="Papas">Papas</option>
+                <option value="Zanahoria">Zanahoria</option>
+            </select>
 
-    <div id= "carnes">
-        <p>¿Que carne tienes?
-         <select> 
-            <option value="Bisteckres">Bisteck de res</option>
-            <option value="Carnemolida">Carne molida</option>
-            <option value="pollo">pollo</option>
-            <option value="camaron">camaron</option>
-            <option value="Nada">Nada</option>
-        </select>
-        <input type = "submit" value="Añadir">
-    </p>
+        </p>
+        <input type = "submit" value="Añadir" class="botones" onclick="anadir_a_lista(0)">
+    </div>
 </div>
 
-<article class = "article">
+
+<div id= "carnes" class="carnes">
+    <p class ="mensajeseleccion"> Carnes </p>
+    <p class = "dropdownlist">
+     <select id ="seleccionarCarnes"> 
+        <option value="Bisteck de res">Bisteck de res</option>
+        <option value="Carne molida">Carne molida</option>
+        <option value="Pollo">Pollo</option>
+        <option value="Camaron">Camaron</option>
+        <option value="Pescado">Pescado</option>
+    </select>
+
+</p>
+<input type = "submit" value="Añadir" class="botones" onclick="anadir_a_lista(1)">
+</div>
+
+
+<div id= "lacteos" class="lacteos">
+    <p class = "mensajeseleccion">Lacteos</p>    
+    <p class= "dropdownlist">
+        <select id="seleccionarLacteos"> 
+            <option value="Leche">Leche</option>
+            <option value="Queso para fundir">Queso para fundir</option>
+            <option value="Queso de mesa">Queso de mesa</option>
+            <option value="Panela">Panela</option>
+            <option value="Mantequilla">Mantequilla</option>
+        </select>
+
+    </p>
+    <input type = "submit" class="botones" value="Añadir"  onclick="anadir_a_lista(2)">
+</div>
+
+
+<div id="divarticulo" class="cdivarticulo">
+    <img src="pictures/notas.png" height="680" width="450">
+</div>
+<article class = "article" >
     <header class="article-titulo"> Importancia de preparar tu comida</header>
     <section class="section">
         <p> Al hacer tu comida en casa estas obteniendo mayores beneficios tanto para tu salud como para tu bolsillo, por eso te 
             invitamos a que pruebes Cocinalo tu, una aplicación diseñada para ti!!!
+        </p>
+        <p class="ventajas">
+            Estas son las <b>ventajas</b> de cocinar tu propia comida:
+        </p>
+        <p class="section">
+            <p>
+                - Sabes lo que comes
+            </p>
+            <p>
+                - Controlas cantidad y calidad
+            </p>
+            <p>
+                - Te relaja
+            </p>
+            <p>
+                - Ahorras dinero
+            </p>
+            <p>
+                - Trabajo en equipo
+            </p>
+        </section>
+    </article>
 
-    </section>
-</article>
+    <div>
+    <input type="submit" class="buscar" value="Buscar" onclick="buscar()">
+    </div>
+    
+    <div>
+    <img alt="Eliminar" class="Imagen_Eliminar" src="pictures/notas.jpg" onclick="deleteRow()">
+    </div>
+    <div id="Productos" class="tablediv">
+        <table id="tableproductos" class="tableproductos">  
+<caption class="caption">PRODUCTOS SELECCIONADOS:</caption>
+<tr >
+    <th  class="th">
+        <b>Frutas/Verduras</b>
+    </th>
+    <th  class="th">
+        <b>Carnes</b>
+    </th>
+    <th  class="th">
+            <b>Lacteos</b>
+        </th >
+</tr>
+    </div> 
+        
+   
 
-<footer id="footer" class=footer> aqui va el footer
-    comunicate con nosotros
-<ul>
-    <li><a href ="http://www.facebook.com" target ="_blank">Facebook</a></li>
-    <li><a href ="tel:3312220606"> (044) 33 1222 0606
-        <li><a href = "mailto:Cocinalotu@gmail.com">Cocinalotu@gmail.com</a></li>
-</footer>
-</body>
-</html>
+    <footer id="footer" class=footer> aqui va el footer
+        comunicate con nosotros
+        <ul>
+            <li><a href ="http://www.facebook.com" target ="_blank">Facebook</a></li>
+            <li><a href ="tel:3312220606"> (044) 33 1222 0606</a></li>
+            <li><a href = "mailto:Cocinalotu@gmail.com">Cocinalotu@gmail.com</a></li>
+        </footer>
+    </body>
+    </html>
