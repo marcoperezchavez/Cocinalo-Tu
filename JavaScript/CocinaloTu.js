@@ -5,14 +5,12 @@ function anadir_a_lista(num){
  	var frutasyv = frutasyv.valueOf();
  	generarCelda(frutasyv,num);
     }
-     if(num==1){
-        
+     if(num==1){     
  	var carnes = document.getElementById("seleccionarCarnes").value;
  	var carnes = carnes.valueOf();
  	generarCelda(carnes,num);
     }
      if(num==2){
-
  	var lacteos = document.getElementById("seleccionarLacteos").value;
  	var lacteos = lacteos.valueOf();
  	generarCelda(lacteos,num);

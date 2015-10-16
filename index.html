@@ -8,24 +8,18 @@
     <meta name="keywords" content="html,css,javascript,rwd">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Cocinalo Tu</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="CSS/Index.css">
+   
+     <link rel="stylesheet" media="(min-width:376px)" href="CSS/Index.css">
+     <link rel="stylesheet" media="(max-width:375px)" href="CSS/IndexMediaE.css">
     <script type="text/javascript" src="JavaScript/CocinaloTu.js"></script>
 </head>
 <body id="body" class="body">
-    <header id="main-header" class="header">
+    <header id="main-header" class="header2">
         <div align= "center" id="Encabezado">
-            <img src="pictures/placerAlPlato.png" height="109" width="600">
-            
+            <img  src="pictures/placerAlPlato.png"  class="header">
         </div>
     </header>
-    <span id="menucompleto" class "menus">
-        <ul id="menu" class="menu">
-            <li>Inicio</li>
-            <li>Recetas</li>
-            <li>Comentarios</li>
-        </ul>
-    </span>
+   
 
     <div id= "msjpmain" class="msjpmain">
         ¿Que es lo que tienes?  Selecciona una opción
@@ -81,7 +75,7 @@
 
 
 <div id="divarticulo" class="cdivarticulo">
-    <img src="pictures/notas.png" height="680" width="450">
+    <img src="pictures/notas.png" height="400" width="200" id="notaimagen">
 </div>
 <article class = "article" >
     <header class="article-titulo"> Importancia de preparar tu comida</header>
@@ -116,7 +110,11 @@
     </div>
     
     <div>
-    <img alt="Eliminar" class="Imagen_Eliminar" src="pictures/notas.jpg" onclick="deleteRow()">
+    <input type="submit"  value="Todo" onclick="lista("reg",0)">
+    </div>
+    
+    <div>
+    <img alt="Eliminar" class="Imagen_Eliminar" src="pictures/eliminar.png" onclick="deleteRow()">
     </div>
     <div id="Productos" class="tablediv">
         <table id="tableproductos" class="tableproductos">  
@@ -136,7 +134,7 @@
         
    
 
-    <footer id="footer" class=footer> aqui va el footer
+    <footer id="footer" class=footer>
         comunicate con nosotros
         <ul>
             <li><a href ="http://www.facebook.com" target ="_blank">Facebook</a></li>
